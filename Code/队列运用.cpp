@@ -4,22 +4,23 @@
 using namespace std;
 int main() {
 	int t, kase = 0;
-	map<int, int>team;
+	
 	while (scanf("%d", &t) == 1 && t) {
 		printf("Scenario #%d\n", ++kase);
-		int n;
-		scanf("%d", &n);
-		for (int i = 0; i < n; i++) {
-			int x;
-			scanf("%d", &x);
-			team[x] = i;
-		}
+		int n;map<int, int>team;
+		for(int j=0;j<t;j++)
+		{scanf("%d", &n);
+			for (int i = 0; i < n; i++) {
+				int x;
+				scanf("%d", &x);
+				team[x] = j;
+			}}
 		char c[10];
 		queue<int>x, x2[1009];
 		while (scanf("%s", c) == 1 && c[0] != 'S') {
 			if (c[0] == 'D') {
 				int m = x.front();
-				printf("%d\n",m);
+				printf("%d\n",x2[m].front());
 				x2[m].pop();
 				if (x2[m].empty())x.pop();
 
@@ -36,4 +37,5 @@ int main() {
 		printf("\n");
 
 	}
+	return 0;
 }
