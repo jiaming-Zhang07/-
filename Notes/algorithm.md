@@ -33,4 +33,4 @@ int main() {
 	for (int i = 0; i < (int)words.size(); i++)if (cnt[repr(words[i])] == 1)cout << words[i] << "\n";
 	return 0;
 }
--e```
+```
