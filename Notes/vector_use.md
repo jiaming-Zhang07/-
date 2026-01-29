@@ -12,4 +12,7 @@ vector<int> v2(v1); // v2 是 v1 的一个深拷贝
 vector<vector<int>> matrix(n, vector<int>(m, 0));
 vector<int> adj[maxn]; // 这种写法最常用！开一个 maxn 长度的静态数组，每个位置是动态 vector
 ```
-
+vector常用操作注意事项：
+```cpp
+for (int i = h + 1; i < (int)pile[p].size(); i++)//size()是无符号型，会警告，先强转
+```
