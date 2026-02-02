@@ -21,6 +21,7 @@ struct Y {
 struct X {//definition
 private:int i;//在不写访问限定符时struct中默认是public，class默认是private，这是struct和class的唯一本质区别
 public:
+	//友元函数的定义也可以在类内完成，但它不是成员函数，因此不会有this,不能直接写i(成员变量)，必须是a.i;
 	void initialize();
 	friend void g(X*,int);//global friend
 	friend void Y::f(X*);//struct member friend
